@@ -123,7 +123,7 @@ open class PagerTabStripViewController: UIViewController, UIScrollViewDelegate {
         updateIfNeeded()
         let needToUpdateCurrentChild = preCurrentIndex != currentIndex
         if needToUpdateCurrentChild {
-            moveToViewController(at: preCurrentIndex)
+            moveToViewController(at: preCurrentIndex, animated: false)
         }
         isViewAppearing = false
         children.forEach { $0.endAppearanceTransition() }
