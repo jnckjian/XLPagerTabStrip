@@ -145,8 +145,8 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType: UICollect
     open override func reloadPagerTabStripView() {
         super.reloadPagerTabStripView()
         guard isViewLoaded else { return }
-        buttonBarView.reloadData()
         cachedCellWidths = calculateWidths()
+        buttonBarView.reloadData()
         buttonBarView.moveTo(index: currentIndex, animated: false, swipeDirection: .none, pagerScroll: .yes)
     }
 
